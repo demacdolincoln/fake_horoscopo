@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+<div class="uk-grid" data-uk-grid-margin>
+	<div class="uk-width-1-1 uk-text-center uk-grid-margin">
+		<div class="uk-block">
+			<h3>Teste e conheça agora as palavras genéricas que vão mudar sua vida</h3>
+			
+			<form action="/" method="POST" accept-charset="utf-8" class="uk-form-stacked">
+				{{ form.csrf_token }}
+				{{ sign(form) }}
+				{{ form.submit(class_="uk-button uk-form-large") }}
+			</form>
+		</div>
+	</div>
+</div>
+
+<hr>
+<div class="uk-container uk-container-center  uk-text-center">
+<div class="uk-grid uk-margin-large" data-uk-grid-margin>
+	<div class="uk-width-1-5">
+		<div class="uk-panel-box uk-align-center uk-panel-box-primary uk-border-circle">
+			<p>A experiência mais fantástica que já vi, nunca esperei tamanha precisão! Ainda estou em choque.</p>
+			<small>O carinha que mora logo alí</small>
+		</div>
+	</div>
+	<div class="uk-width-1-5">
+		<div class="uk-panel-box uk-align-center uk-panel-box-primary uk-border-circle">
+			<p>Não há como dizer o quanto estas mensagens melhoraram minha vida.</p>
+			<small>Bruxa do 71</small>
+		</div>
+	</div>
+	<div class="uk-width-1-5">
+		<div class="uk-panel-box uk-align-center uk-panel-box-primary uk-border-circle">
+			<p>A Força para mim agora tem um sentido completamente novo</p>
+			<small>Obi Wan</small>
+		</div>
+	</div>
+	<div class="uk-width-1-5">
+		<div class="uk-panel-box uk-align-center uk-panel-box-primary uk-border-circle">
+			<p>Coisa do demônio!!!</p>
+			<small>famoso pastor que compra horário na TV</small>
+		</div>
+	</div>
+	<div class="uk-width-1-5">
+		<div class="uk-panel-box uk-align-center uk-panel-box-primary uk-border-circle">
+			<p>Fazer com que um humano fizesse este site não foi fácil, e olha que eu fiz o mundo em apenas sete dias.</p>
+			<small>Deus</small>
+		</div>
+	</div>
+</div>	
+</div>
+
+
+{% endblock %}

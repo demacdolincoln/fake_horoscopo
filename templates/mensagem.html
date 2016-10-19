@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="uk-grid uk-grid-margin" data-uk-grid-margin>
+	<div class="uk-width-1-1 uk-text-center">
+		<div class="uk-block uk-animation-fade">
+		<figure class="uk-overlay-background">
+			<img src="/static/icons/{{form.signos.data}}.svg" width="300px" data-uk-svg/>
+			<figcaption class="uk-overlay-panel">
+				<div class="uk-vertical-align">
+				<div class="uk-vertical-align-middle">
+					<h1 class="message uk-text-contrast ">{{mensagem}}</h1>
+				</div>
+					
+				</div>
+			</figcaption>
+			
+		</figure>	
+
+		</div>
+			<hr>
+			<form action="/" method="POST" accept-charset="utf-8" class="uk-form-stacked">
+				{{ form.csrf_token }}
+				{{ sign(form) }}
+				{{ form.submit(class_="uk-button uk-form-large") }}
+			</form>
+		
+	</div>
+</div>
+
+
+{% endblock %}

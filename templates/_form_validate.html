@@ -1,0 +1,42 @@
+{% macro sign(field)  %}
+	{% if field.errors %}
+		<p>{{field.errors}}</p>
+		{{field.signos(class="uk-form uk-form-large")}}
+	{% else %}
+		{{field.signos(class="uk-form uk-form-large")}}
+	{% endif %}
+{% endmacro %}
+
+{% macro msg(field) %}
+	{% if field.errors %}
+		{% for error in field.errors["mensagem"]%}
+			<p class="uk-alert-danger">{{error}}</p>
+		{% endfor %}
+		{{field.mensagem(class="uk-form send_message")}}
+	{% else %}
+		{{field.mensagem(class="uk-form send_message")}}
+	{% endif %}	
+{% endmacro %}
+
+{% macro login_hlp(field)  %}
+	{% if field.errors %}
+		<p>{{field.errors}}</p>
+		{{field.name(class="uk-form", placeholder="name")}}
+		<p></p>
+		{{field.passwd(class="uk-form", placeholder="passwd")}}
+	{% else %}
+		{{field.name(class="uk-form", placeholder="name")}}
+		<p></p>
+		{{field.passwd(class="uk-form", placeholder="passwd")}}
+	{% endif %}
+{% endmacro %}
+
+{% macro moderate_hlp(field) %}
+	{% if field.errors %}
+		{{ field.errors }}
+	{% endif %}
+	{% for sub in field.exe %}
+		{{sub}}{{sub.label}}
+	{% endfor %}
+		{{field.submit()}}
+{% endmacro %}

@@ -1,0 +1,73 @@
+{% from "_form_validate.html" import sign %}
+<html>
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <title>Fake Horóscopo</title>
+    <script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.1/js/uikit.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.1/css/components/sticky.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.1/css/uikit.min.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="/static/css/custom.css" type="text/css" charset="utf-8">
+
+    {% endblock %}
+</head>
+<body class="body ">
+    <div class="uk-grid">
+        <div class="uk-width-1-5">
+            <div class="uk-margin-remove" data-uk-sticky>
+                <div class="uk-panel-box uk-border-rounded uk-alert-danger">
+                    <a href="#modal" class="uk-icon-warning uk-text-danger" data-uk-modal>A verdade por trás deste site</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="uk-modal">
+        <div class="uk-modal-dialog uk-modal-dialog-large uk-text-justify">
+            <a href="" class="uk-modal-close uk-close uk-text-justify"></a>
+            <h1>Para quê tanta zoeira?</h1>
+            <p>Todo este site foi feito com base no que nos diz o artigo <b>The Fallacy of Personal Validation: A Classroom Demonstration of Gullibility</b> escrito pelo psicólogo <b>Bertram Forer</b> publicado em 1949. Este artigo mostra um experimento feito em sala de aula, ele pediu para que os alunos respondessem um teste de personalidade e disse que com base no teste cada um receberia uma folha com características de sua personalidade, ao final eles avaliariam a precisão dando uma nota de 0 (muito ruim) a 5 (perfeito). O mesmo texto foi dado a todos os alunos, ei-lo aqui:</p>
+
+            <blockquote>
+                <p><i class="uk-icon-quote-left uk-icon-large uk-align-left"></i>Você tem uma necessidade de ser querido e admirado por outros, e mesmo assim você faz críticas a si mesmo. Você possui certas fraquezas de personalidade mas, no geral, consegue compensá-las. Você tem uma capacidade não utilizada que ainda não a tomou em seu favor. Disciplinado e com auto-controle, você tende a se preocupar e ser inseguro por dentro. Às vezes tem dúvidas se tomou a decisão certa ou se fez a coisa certa. Você prefere certas mudanças e variedade, e fica insatisfeito com restrições e limitações. Você tem orgulho por ser um pensador independente, e não aceita as opiniões dos outros sem uma comprovação satisfatória. Mas você descobriu que é melhor não ser tão franco ao falar de si para os outros. Você é extrovertido e sociável, mas há momentos em que você é introvertido e reservado. Por fim, algumas de suas aspirações tendem a fugir da realidade."</p>
+            </blockquote>
+
+            <p>Como pode ver, o texto é tão genérico, mas tão genérico que se aplica a qualquer pessoa, e ainda assim a média que a turma deu foi de <b>4,26</b>, não é incrível saber que um texto genérico assim, que não diz nada e feito juntando frases de horóscopo no jornal tenha conseguido tamanha precisão segundo os avaliadores?</p>
+
+            <p>O que podemos concluir disso tudo e por que algumas pessoas acreditam em horóscopos de jornais e internet?</p>
+            <ul>
+                <li>A pessoa acredita que o texto é personalizado por ter alguma variável relativa a sua pessoa de algum modo dando a impressão de ser pessoal (como o signo zodiacal.)</li>
+                <li>Se quem escreveu ou falou é famoso ou tem depoimentos que atestam a "autoridade", automaticamente já começam a considerar tudo verdadero (tipo aquele programa de rádio nos EUA que anunciou uma invasão marciana e pessoas entraram em pânico).</li>
+                <li>Todo mundo gosta de uma massagem no ego, deste modo, se as palavras são positivas e tratam de traços positivos da personalidade, por mais genéricas que sejam, a pessoa tende a dar maior credibilidade.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="uk-grid uk-margin-remove">
+        <div class="uk-width-1-1 uk-text-center">
+
+            <h1 class="uk-heading-large">Fake Horóscopo</h1>
+            <p class="uk-text-large">Confie no poder da aleatoriedade</p>
+
+        </div>
+    </div>
+    <hr>
+    {% block content %}
+    {% endblock %}
+    {% block footer %}
+    <div class="uk-grid" data-uk-grid-margin>
+        <div class="uk-width-1-1 uk-text-center">
+            <a href="/contrib">
+                <div class=" uk-block footer uk-block-secondary ">
+                    <h3 class="uk-text-contrast">Contribua com uma frase genérica agora mesmo</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+    {% endblock %}
+</div>
+
+</body>
+</html>

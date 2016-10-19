@@ -1,0 +1,24 @@
+.body{
+	background: linear-gradient(lightgreen, darkblue);
+}
+
+.message{
+	font-size: 30px;
+	background-color: transparent;
+
+}
+
+.send_message{
+	width: 400px;
+	height: 150px;
+	background-color: rgba(0,0,0,0.5);
+	color: silver;
+	border: none;
+	/*text-align: center;*/
+}
+
+.footer{
+	height: 50px;
+	vertical-align: center;
+	padding: auto;
+}

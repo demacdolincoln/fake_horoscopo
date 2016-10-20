@@ -1,14 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-from flask_login import LoginManager, login_required
 from model import *
 from database import *
 from data_model import *
 
 app = Flask("fake_horoscopo")
 app.config["SECRET_KEY"] = "efeito_forer"
-
-login_manager = LoginManager()
-login_manager.init_app(app)
 
 @app.route("/", methods=["GET", "POST"])
 def index():

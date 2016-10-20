@@ -3,7 +3,7 @@ html {
 }
 
 .body{
-	background-image: url('static/images/constellation.jpg');
+	background-image: url('../images/constellation.jpg');
 }
 
 .message{

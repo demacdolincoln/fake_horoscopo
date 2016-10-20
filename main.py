@@ -2,9 +2,11 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from model import *
 from database import *
 from data_model import *
+from werkzeug.contrib.fixers import ProxyFix
 
 app = Flask("fake_horoscopo")
 app.config["SECRET_KEY"] = "efeito_forer"
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 @app.route("/", methods=["GET", "POST"])
 def index():

@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from model import *
 from database import *
 from data_model import *
+from os import getenv
 from werkzeug.contrib.fixers import ProxyFix
 
 app = Flask("fake_horoscopo")
@@ -64,5 +65,6 @@ def moderate():
     else:
         return redirect(url_for("login_view"))
 
-
-app.run()
+if __name__ == '__main__':
+    port = getenv("PORT")
+    app.run(port=port)

@@ -3,14 +3,14 @@
 {% block content %}
 
 <div class="uk-grid" data-uk-grid-margin>
-	<div class="uk-width-1-1 uk-text-center uk-grid-margin uk-margin-large-top">
+	<div class="uk-width-1-1 uk-text-center uk-grid-margin uk-margin-large-top" s>
 		<div class="uk-container-center uk-container uk-width-1-2">
 			<h1>Já leu <a href="#modal" class="uk-text-danger uk-alert-danger uk-border-rounded" data-uk-modal>A verdade por trás deste site</a>?</h1>
 			<p class="uk-text-contrast">Apesar da zoeira este site tenta ter alguma seriedade, portanto escreva coisas genéricas e positivas, que tenham uma pseudo pessoalidade do tipo:</p>
 			<blockquote class="uk-text-contrast">
 				{{msg_old}}
 			</blockquote>
-			<form action="/contrib" method="POST" accept-charset="utf-8">
+			<form action="/contrib" method="POST" accept-charset="utf-8" tyle="margin-botton:50px;">
 				{{ new_msg.csrf_token }}
 				{{ msg(new_msg) }}
 				<p></p>

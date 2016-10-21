@@ -1,3 +1,11 @@
+/* uikit ovverride */
+
+.uk-modal-dialog {
+    color: black;
+}
+
+/* end uikit override */
+
 html {
     color: white;    
 }
@@ -39,4 +47,16 @@ h1, h2, h3, h4, h5, h6 {
 .uk-button {
     padding-top: 6px;
     padding-bottom: 10px;
+}
+
+.testimonials .uk-border-circle {    
+    box-shadow: 1px 1px 5px 1px #464545;
+    width: 180px;
+    height: 180px;
+}
+
+.testimonials .uk-border-circle p {
+    padding-top: 20px;
+    width: 80%;
+    margin: 0 auto;
 }

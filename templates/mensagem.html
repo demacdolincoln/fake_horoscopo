@@ -4,6 +4,11 @@
 
 <div class="uk-grid uk-grid-margin" data-uk-grid-margin>
 	<div class="uk-width-1-1 uk-text-center">
+	<form action="/" method="POST" accept-charset="utf-8" class="uk-form-stacked">
+				{{ form.csrf_token }}
+				{{ sign(form) }}
+				{{ form.submit(class_="uk-button uk-form-large") }}
+			</form>
 		<div class="uk-block uk-animation-fade">
 		<figure class="uk-overlay-background">
 			<img src="/static/icons/{{form.signos.data}}.svg" width="300px" data-uk-svg/>
@@ -18,15 +23,6 @@
 			
 		</figure>	
 
-		</div>
-			<hr>
-			<form action="/" method="POST" accept-charset="utf-8" class="uk-form-stacked">
-				{{ form.csrf_token }}
-				{{ sign(form) }}
-				{{ form.submit(class_="uk-button uk-form-large") }}
-			</form>
-		
-	</div>
 </div>
 
 
